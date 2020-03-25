@@ -1,3 +1,4 @@
+//tic tac toe via jquery
 class View {
     constructor(game, $el) {
         this.game = game;
