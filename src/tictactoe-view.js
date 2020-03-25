@@ -33,6 +33,14 @@ class View {
 
             const winner = this.game.winner();
             const $figcaption = $("<figcaption>");
+
+            if (winner) {
+                this.$el.addClass(`winner-${winner}`);
+                $figcaption.html(`You win, ${winner}`);
+            } else {
+                $figcaption.html("It's a draw!");
+            }
+            this.$el.append($figcaption);
         }
     }
 
