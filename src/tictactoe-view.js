@@ -58,3 +58,5 @@ class View {
         this.$el.append($ul);
     }
 }
+
+module.exports = View;
