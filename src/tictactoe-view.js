@@ -28,6 +28,11 @@ class View {
 
         if (this.game.isOver()) {
             //clearnup click handlers
+            this.$el.off("click");
+            this.$el.addClass("game-over");
+
+            const winner = this.game.winner();
+            const $figcaption = $("<figcaption>");
         }
     }
 
