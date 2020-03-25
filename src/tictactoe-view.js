@@ -14,6 +14,23 @@ class View {
         }));
     }
 
+    makeMove($square) {
+        const pos = $square.data("pos");
+        const currentPlayer = this.game.currentPlayer;
+
+        try {
+            this.game.playMove(pos);
+        } catch (e) {
+            alert("This " + e.msg.toLowerCase());
+            return;
+        }
+        $square.addClass(currentPlayer);
+
+        if (this.game.isOver()) {
+            //clearnup click handlers
+        }
+    }
+
     setupBoard() {
         const $ul = $("<ul>");
 
